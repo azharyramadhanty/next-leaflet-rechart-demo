@@ -7,7 +7,7 @@ export const config = { matcher: "/:path*" };
 export async function middleware(req: NextRequest) {
     const AUTH_URL = "https://login-v3.qa.idaman.pertamina.com/connect/authorize?";
     const CLIENT_ID = "a9d5192f2d854b86b8c11ec5715c5f35";
-    const REDIRECT_URI = "https://smartbunker-pis.southeastasia.cloudapp.azure.com/authentication";
+    const REDIRECT_URI = "http://localhost:3000/authentication";
     const accessToken = req.cookies.get("access_token")?.value;
     const { pathname } = req.nextUrl
     // const refreshToken = req.cookies.get("refresh_token")?.value;
@@ -68,7 +68,7 @@ export async function middleware(req: NextRequest) {
             // Clear cookies and Try redirect to login page
             const params = new URLSearchParams();
             params.append("client_id", "a9d5192f2d854b86b8c11ec5715c5f35");
-            params.append("redirect_uri", "https://smartbunker-pis.southeastasia.cloudapp.azure.com/authentication");
+            params.append("redirect_uri", "http://localhost:3000/authentication");
             params.append("response_type", "code");
             params.append("nonce", generateNonce());
             params.append("scope", "openid profile email");
