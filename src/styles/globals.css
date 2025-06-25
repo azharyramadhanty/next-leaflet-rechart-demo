@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "flowbite";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+/* maps */
+.leaflet-container {
+  /* height: 78vh; */
+  width: 73%;
+  border-radius: 20px;
+  z-index: 9;
+  position: absolute;
+  /* padding-bottom: 20px; */
+  /* margin-left: -15px; */
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  width: 350px;
+  height: auto;
+  padding: 2px 0 2px 0;
+}
+
+.leaflet-popup-content {
+  padding: 3px 0 4px 0;
+}
+
+/* .leaflet-control-container{ */
+  /* .leaflet-top{ */
+    /* right:0px!important; */
+    /* left: auto; */
+    /* margin-right: 10px; */
+    /* .leaflet-left{ */
+      /* right: 0px!important; */
+      /* left: unset!important */
+    /* } */
+  /* }  */
+/* } */
+
+/* .leaflet-touch .leaflet-bar a{
+  line-height: 26px!important ;
+} */
+
+.leaflet-pane .leaflet-popup-pane {
+  .leaflet-popup-close-button,
+  .leaflet-popup-tip-container {
+    display: none;
+  }
+}
+
+.leaflet-touch .leaflet-control-attribution,
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+  box-shadow: none;
+}
+
+.leaflet-touch .leaflet-control-layers,
+.leaflet-touch .leaflet-bar {
+  border: none !important;
+}
+
+.leaflet-touch .leaflet-bar a:first-child,
+.leaflet-touch .leaflet-bar a:last-child {
+  border-radius: 15px !important;
+  margin-bottom: 5px;
+}
+
+/* sidebarKPI*/
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* For Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* For Firefox */
+}
+
+/* daterangepicker component */
+.react-datepicker,
+.react-datepicker__header,
+.react-datepicker__month-container  {
+  background-color: #ffffff !important;
+  border-radius: 16px !important;
+}
+.react-datepicker__header {
+  border-bottom: 0 !important;
+  font-family: nunito !important;
+  font-size: 12px !important;
+}
+.react-datepicker__navigation-icon::before {
+  border-color: #6f6b75 !important;
+  border-width: 2px 2px 0 0 !important;
+}
+.react-datepicker__month-text {
+  padding: 0.5rem !important;
+  border-radius: 0.5rem !important;
+}
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__month-text--in-selecting-range:not([aria-disabled=true]):hover,
+.react-datepicker__month-text--keyboard-selected:not([aria-disabled=true]):hover {
+  background-color: #E3DFDF !important;
+  color: #ffffff !important;
+}
+.react-datepicker__month-text--in-selecting-range:not(.react-datepicker__month-text--in-range),
+.react-datepicker__month-text--in-range {
+  background-color: #C3C1C1 !important;
+}
+#datepicker-range .react-datepicker-wrapper {
+  width: 100% !important;
+}
+.react-datepicker__view-calendar-icon input {
+  padding: 0.15rem 2.1rem 0.15rem !important;
+}
+.react-datepicker__calendar-icon {
+  padding-left: 0.5rem !important;
+}
+.react-datepicker-popper {
+  z-index: 60 !important
+}
+
+/* custom scrollbar for datatable component */
+.rounded-scrollbar::-webkit-scrollbar {
+  width: 4px; /* Adjust width */
+}
+.rounded-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light grey track */
+  border-radius: 10px;
+}
+.rounded-scrollbar::-webkit-scrollbar-thumb {
+  background: #c4c4c4; /* Darker scrollbar */
+  border-radius: 10px;
+}
+.rounded-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3; /* Darker on hover */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hidden {
+  scrollbar-width: none;
+}
+
+.recharts-polar-grid-concentric path:nth-child(even) {
+  fill: #edecec;
+  opacity: 0.4;
+  stroke: #171717;
+}
+
+.recharts-polar-grid-concentric path:nth-child(odd) {
+  fill: #fafafa;
+  opacity: 0.3;
+  stroke: #171717;
+}
+
+/* Chart */
+/* .recharts-wrapper{
+  width: auto!important;
+  height: auto!important;
+}
+.recharts-legend-wrapper{
+  width: auto!important;
+  padding: 45px;
+  font-size: 10px;
+} */
+
+/* svg.recharts-surface tspan { */
+	/* font-size: 10px !important; */
+	/* color: black !important; */
+	/* font-family: Nunito; */
+  /* line-height: 2; */
+/* } */
